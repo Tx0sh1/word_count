@@ -6,25 +6,22 @@ fn main() {
     println!("enter word you want to count");
 
     let mut word_to_count = String::new();
-    let content = read_to_string("sample.txt").unwrap();
-    
+    let binding = read_to_string("sample.txt").unwrap().to_lowercase();
+    let content = binding.split_whitespace();   
 
     io::stdin().read_line(&mut word_to_count).expect("Failed to read line");
 
-    //Remove this and implement a pdf file reader
-    let words = vec!["apples", "banana", "apples", "king", "rabbit"]; //test
-
-    let word_to_count = word_to_count.trim();
+    let word_to_count = word_to_count.trim().to_string().to_lowercase();
 
     let mut count = 0;
 
-    for word in words.iter() {
-        if *word == word_to_count{
+    for word in content {
+        if word == word_to_count{
             count += 1;}
         }
     
 
     println!("word input: {}", word_to_count);
     println!("word shows up: {}", count);
-    println!("{}", content);
+
 }
