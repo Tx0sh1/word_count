@@ -15,9 +15,8 @@ Counts how many times the word appears.
 CLI-based and minimal — just trying to get it working right!
 
 ### 🦀 Built With:
-Rust
 
-A text reading crate (e.g., text or lotext — will decide as I go)
+Rust
 
 ### 📦 How to Run:
 #### Clone this repo:
