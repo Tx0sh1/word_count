@@ -1,11 +1,13 @@
 use std::io;
-// use pdf;
+use std::fs::read_to_string;
 fn main() {
     println!("Welcome to the word count program"); 
 
     println!("enter word you want to count");
 
     let mut word_to_count = String::new();
+    let content = read_to_string("sample.txt").unwrap();
+    
 
     io::stdin().read_line(&mut word_to_count).expect("Failed to read line");
 
@@ -23,5 +25,6 @@ fn main() {
     
 
     println!("word input: {}", word_to_count);
-    println!("word shows up: {}", count)
+    println!("word shows up: {}", count);
+    println!("{}", content);
 }
