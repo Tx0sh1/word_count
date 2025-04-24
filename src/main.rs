@@ -6,7 +6,7 @@ fn main() {
     println!("enter word you want to count");
 
     let mut word_to_count = String::new();
-    let binding = read_to_string("sample.txt").unwrap().to_lowercase();
+    let binding = read_to_string("location of your txt file/").unwrap().to_lowercase();
     let content = binding.split_whitespace();   
 
     io::stdin().read_line(&mut word_to_count).expect("Failed to read line");
